@@ -9,7 +9,7 @@ int main() {
 		if (!isPrime[i]) {
 			isPrime[++isPrime[0]] = i;
 			if ( n % i == 0) {
-				cout << i<<" ";
+				//cout << i<<" ";
 				n = n / i;
 				cout << n<<" ";
 				if (n == 0)
@@ -23,6 +23,7 @@ int main() {
 			}
 		}
 	}
+	//cout << isPrime[10001];
 	/*for (int i = 1 ; i <isPrime[0]; i++)
 	{
 		cout << isPrime[i] << " ";
