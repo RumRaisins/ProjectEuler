@@ -1,9 +1,9 @@
-#include<iostream>
-#include<math.h>
+#include"ReadText.h"
 using namespace std;
-int main() {
 
-	int n;
+int32_t main() {
+
+	/*int n;
 	int count = 2;
 	int sum = 0;
 	while (cin >> n) {
@@ -23,8 +23,16 @@ int main() {
 		cout << sum;
 
 		delete[] p;
+	}*/
+	int32_t sum = 0;
+	int32_t a = 1, b = 1;
+	while(b<4000000){
+		int temp = b;
+		b += a;
+		a = temp;
+		if (!(b & 1))
+			sum += b;
 	}
-
 
 
 	system("pause");

@@ -6,11 +6,11 @@ std::vector<std::vector<int> > readTriangleInt(std::string path)
 {
 	std::vector<std::vector<int> > vec;
 
-	char line[256]; int i = 1;
+	char line[500]; int i = 1;
 	std::fstream ifile(path);
 	while (ifile.good()) {
 		std::vector<int> vecc;
-		ifile.getline(line,256);
+		ifile.getline(line,500);
 		std::istringstream iss(line);
 		for (int j = 1; j <= i; j++)
 		{
@@ -21,6 +21,14 @@ std::vector<std::vector<int> > readTriangleInt(std::string path)
 		vec.push_back(vecc);
 		i++;
 	}
+	/*for (int i = 0; i < vec.size(); i++)
+	{
+		for (int j = 0; j < vec[i].size(); j++)
+		{
+			std::cout << vec[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}*/
 	return vec;
 }
 

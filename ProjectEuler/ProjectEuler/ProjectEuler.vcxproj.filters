@@ -75,6 +75,69 @@
     <ClCompile Include="21_质因数求和.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="19_世纪有多少个周日.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="25_第一个1000位的斐波那契数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="24_字典序第100W个.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="23_盈数和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="28_1001X1001螺旋矩阵的对角线和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="30这个数的每位的5次幂求和是这个数（这些数求和）.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="31_2英镑有多少种组合方式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="26_最大循环节.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="29_有多少个数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="22_名字的权重之和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="32_全数字的乘积的和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="33_消去数字的分数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="34_数位阶乘和等于本身.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="35_圆周素数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="36_十进制和二进制都是回文数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="37_循环素数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="40_钱珀瑙恩常数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="41_1~n全用到的n位素数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="48_1000项自幂数求和的后十位.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="50_最大素数和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadText.h">
