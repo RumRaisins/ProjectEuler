@@ -21,21 +21,7 @@ void InitPrime(int *primer, int range, int *isprimer) {
 int main() {
 	InitPrime(Primer, MAX_N, isPrimer);
 	int sum = 0 ,Max = 0;
-	//for (int i = 1; i < Primer[0]; i++)
-	//{
-	//	cout << sum << "+"<<Primer[i]<<" = ";
-	//	sum += Primer[i];
-	//	cout << sum <<endl;
-	//	if (sum > 1000) {
-	//		break;
-	//	}
-	//	if (isPrimer[sum] != 1) {
-	//		//cout << sum<<endl;
-	//		if (sum > Max) {
-	//			Max = sum;
-	//		}
-	//	}
-	//}
+
 	int counter = 0; int maxCounter = 0;
 	for (int i = 1; i < Primer[0]; i++)
 	{

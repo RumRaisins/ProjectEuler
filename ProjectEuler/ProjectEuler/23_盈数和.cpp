@@ -1,40 +1,48 @@
 #include "ReadText.h"
 using namespace std;
 
+
+#define MAX_N 28123
+int Primer[MAX_N + 5] = { 0 };
+using namespace std;
+
+void InitPrime(int *primer, int range) {
+	for (size_t i = 2; i <= range; i++)
+	{
+		if (!primer[i]) primer[++primer[0]] = i;
+		for (size_t j = 1; j <= primer[0] && primer[j] * i < range; j++) {
+			primer[primer[j] * i] = 1;
+			if (i%primer[j] == 0)break;
+		}
+	}
+}
+
 int PrimeNum(int n,int prime) {
 	int i = 0;
-	while (n % prime==0)
+	while (n % prime == 0)
 	{
 		i++;
 		n /= prime;
 	}
-	//cout << i;
 	return i;
 }
 
 
 int main() {
+	InitPrime(Primer, MAX_N);
+	int abundantInt[28123] = { 0 };
+	int int28123[28124] = { 0 };
+	int counter = 0;
 	
-	string path = "Z:\\ProjectEuler\\ProjectEuler\\ProjectEuler\\ËØÊý±í.txt";
-	bool noStop = true;
-	int *p;
-	readPrimeText(path, &p);
-	int lp = p[0] + 1;
-	/*for (int i = 0 ; i < lp;i++)
-	{
-		cout << p[i]<<" ";
-	}*/
-	//map<int, int>abundantInt;
-	vector<int> abundantInt2;
-	for (int i = 12 ; i <= 20161;i++)
+	for (int i = 12 ; i <= 28123;i++)
 	{
 		int temp = i, j = 1, sum = 1;
 		while (temp != 1)
 		{
-			if (temp % p[j] == 0) {
-				int n = PrimeNum(temp, p[j]);
-				n = pow(p[j], n);
-				sum *= (1 - n*p[j]) / (1 - p[j]);
+			if (temp % Primer[j] == 0) {
+				int n = PrimeNum(temp, Primer[j]);
+				n = pow(Primer[j], n);
+				sum *= (1 - n*Primer[j]) / (1 - Primer[j]);
 				//cout << sum << " ";
 				temp /= n;
 				j++;
@@ -44,45 +52,31 @@ int main() {
 			}
 		}
 		if (sum-i > i) {
-			abundantInt2.push_back(i);
+			abundantInt[counter]=i;
 			//abundantInt[i] = 1;
+			counter++;
 		}
 	}
 	ulli sum = 0;
-	int ls = abundantInt2.size();
-	for (int i = 1; i <= 20161; i++)
+	for (int i = 0; i < counter; i++)
 	{
-		for (int j = 0; j <ls ; j++)
+		for (int j = 0; j <counter ; j++)
 		{
-			if (i < abundantInt2[j]) {
-				sum += i;
-				break;
-			}
-			vector<int>::iterator it = find(abundantInt2.begin(), abundantInt2.end(), i - abundantInt2[j]);
-			if (it != abundantInt2.end()) {
-				sum += i;
-				break;
-			}
+			if (abundantInt[i] + abundantInt[j] > 28123)break;
+			int28123[abundantInt[i] + abundantInt[j]] = 1;
+			if(abundantInt[i] + abundantInt[j] ==20)
+				cout << i << " " << j << endl;;
 		}
-		cout << sum << endl;
+	}
+	
+	for (int i = 1; i <= 28123; i++)
+	{
+		
+		if (!int28123[i]) {
+			sum += i;//, cout << i << " ";
+		}
 	}
 	cout << sum;
-
-
-	//ulli sum = (1 + 20161) * 20161 >> 1;
-	//cout << sum << endl;
-	//for (int i = 1; i <= 20161; i++)
-	//{
-	//	if (abundantInt[i] == 1)
-	//		sum -= i;
-	//}
-	//cout << sum;
-
-	///*for (int i = 1; i <= 100; i++)
-	//{
-	//	if (abundantInt[i] == 1)
-	//		cout << i << endl;
-	//}*/
 	system("pause");
 	return 0;
 }

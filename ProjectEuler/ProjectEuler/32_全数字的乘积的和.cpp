@@ -8,7 +8,7 @@ int main() {
 	bool isUsed[11];
 	int s = 0;
 	map<int, int> mapp;
-	for (int i = 12; i <= 98; i++)
+	for (int i = 2; i <= 9999; i++)
 	{
 		bool Stop = false;
 		for (int k = 0 ; k < 11 ; k ++)
@@ -37,7 +37,7 @@ int main() {
 			else
 				jl++;
 		}			
-		for (; j <= 9876; j++) {
+		for (; j <= 9999; j++) {
 			bool isStop = false;
 			int temp = i*j;
 			if (temp > 10000) 
@@ -69,7 +69,16 @@ int main() {
 				}
 				isUUsed[temptemp % 10] = true;
 				temptemp /= 10;
-			}						//判断积是否被用过
+			}	
+			/*for (size_t i = 0; i < 10; i++)
+			{
+				if (!isUUsed[i]) {
+					isPrefectNumber = false;
+					break;
+				}
+			}*/
+			
+			//判断积是否被用过
 			if (isPrefectNumber) {
 				cout << i << "*" << j << "=" << temp << endl;
 				mapp[temp] = temp;
@@ -79,6 +88,7 @@ int main() {
 	int sum = 0;
 	for (auto c:mapp)
 	{
+		cout << c.first << endl;
 		sum += c.first;
 	}
 	cout << sum;

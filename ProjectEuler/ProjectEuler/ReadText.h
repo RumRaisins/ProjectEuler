@@ -9,6 +9,7 @@
 #include<map>
 #include<list>
 #include<inttypes.h>
+#include<algorithm>
 typedef unsigned long long int ulli;
 
 //void readTriangleInt(std::string path,std::vector<std::vector<int> > vec);
